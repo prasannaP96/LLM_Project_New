@@ -7,10 +7,8 @@ from backend.agents.compliance import compliance_agent
 from backend.agents.llm import llm_agent
 from backend.agents.monitor import monitor_agent
 
-
 def route(state):
     return state["status"]
-
 
 workflow = StateGraph(AgentState)
 
