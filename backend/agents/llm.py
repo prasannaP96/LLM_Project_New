@@ -5,7 +5,9 @@ from backend.state import AgentState
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY") or "gsk_t1hGi6uUiENLsfFzxJLQWGdyb3FYlBsWwjzauQ0RSSB7f4MYy"
+
+client = Groq(api_key=api_key)
 
 def llm_agent(state: AgentState) -> dict:
 
